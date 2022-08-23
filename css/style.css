@@ -1,0 +1,140 @@
+:root {
+    --cream: #f2ebe3;
+    --dark-green: #3c8067;
+    --darker-green: #15431d;
+    --letters: 	#6c7289;
+    --white: #ffffff;
+    --title:'Fraunces', serif;
+    --p:'Montserrat', sans-serif;
+
+}
+
+/* globals */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1rem = 10px  */
+    background-color: var(--cream);
+    
+}
+
+.contenedor {
+    background-color: var(--white);
+    border-radius: 1rem;
+    max-width: 100rem;
+    height: 70rem;
+    margin-top: 10rem;
+    margin-left: 45rem;
+}
+@media (max-width:768px) {
+    .contenedor {
+        display: grid;
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+/* head */
+.head {
+    font-family: var(--p);
+    color: var(--letters);
+    font-weight: 400;
+    margin-top: 5rem;
+    
+}
+.title {
+    font-family: var(--title);
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 6rem;
+    margin-top: 5rem;
+}
+.text {
+    font-family: var(--p);
+    color: var(--letters);
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-align: left;
+    line-height: 3rem;
+    
+}
+/* square's 2PARTS */
+.division {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 4rem;
+}
+@media (min-width:768px) {
+    .division {
+        display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    }
+    
+}
+ .derecha {
+    grid-column: 2 / 3;
+    text-align: left;
+    
+}
+.izquierda {
+    grid-column: 1 / 2;
+    background-image: url(../img/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    border-radius: 1rem 0 0 1rem;
+}
+
+/* PRICES */
+.prices {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 5rem;
+}
+.price {
+    font-family: var(--title);
+    color: var(--dark-green);
+    font-size: 5rem;
+    text-align: center;
+}
+.price__previous {
+    font-family: var(--p);
+    color: var(--letters);
+    text-decoration:line-through;
+    font-size: 2rem;
+    margin-top: 6rem;
+    text-align:justify;
+}
+
+/* BUTTON */
+
+.bot {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-left: -5rem;
+}
+.boton {
+    font-family: var(--p);
+    color: var(--white);
+    background-color: var(--dark-green);
+    padding: 1.8rem 14rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-size: 2.2rem;
+    background-position: 10rem;
+}
+.boton:hover {
+    background-color: var(--darker-green);
+}
+
